@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const chatbotMarkup = `
     <div class="chatbot-widget" aria-live="polite">
         <button class="chat-toggle" aria-label="Open chat">💬</button>
@@ -65,12 +65,12 @@
             reply: 'Our team will share available class timings after registration.'
         },
         {
-            keywords: ['join'],
+            keywords: ['join', 'registration'],
             reply: 'Please complete the registration form on the Contact page to join Back to Nature Yoga.'
         }
     ];
 
-    const welcomeMessage = '🌿 Welcome to Back to Nature Yoga!\nI\'m your virtual assistant. Ask me about yoga classes, trainers, pricing, schedules, benefits, or how to join.';
+    const welcomeMessage = '🌿 Welcome to Back to Nature Yoga! How can I help you today?';
     const fallbackMessage = 'Thank you for your question. For detailed assistance, please submit the contact form and our team will get back to you.';
 
     function addMessage(text, type) {
