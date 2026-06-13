@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back to Nature Chatbot Demo</title>
+    <link rel="stylesheet" href="css/chatbot.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #f6faf4 0%, #e9f3e7 100%);
+            color: #2f4e2e;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .demo-page {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem 8rem;
+        }
+        .demo-page h1 {
+            font-size: clamp(2.5rem, 4vw, 3.4rem);
+            margin: 0 0 1rem;
+            color: #305434;
+        }
+        .demo-page p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            max-width: 760px;
+            color: #4a644d;
+        }
+        .demo-card {
+            margin-top: 2rem;
+            padding: 2rem;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(94, 137, 99, 0.16);
+            box-shadow: 0 22px 50px rgba(44, 80, 45, 0.08);
+        }
+    </style>
+</head>
+<body>
+    <main class="demo-page">
+        <h1>Back to Nature Yoga Chatbot</h1>
+        <p>This demo page shows the friendly chatbot assistant designed for the Back to Nature website. It is responsive, animated, and built with pure HTML, CSS, and JavaScript.</p>
+        <div class="demo-card">
+            <h2>How to integrate</h2>
+            <p>Include the stylesheet and script in your existing site pages, then the chatbot will automatically appear as a floating widget.</p>
+            <pre><code>&lt;link rel="stylesheet" href="css/chatbot.css"&gt;
+&lt;script src="js/chatbot.js" defer&gt;&lt;/script&gt;</code></pre>
+        </div>
+    </main>
+    <script src="js/chatbot.js" defer></script>
+</body>
+</html>
