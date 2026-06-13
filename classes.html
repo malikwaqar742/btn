@@ -8,20 +8,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
-
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="brand">Back to Nature</a>
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">??</button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <nav class="main-nav" id="mainNav">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="classes.html">Classes</a>
@@ -31,49 +26,47 @@
     </header>
 
     <main>
-        <section class="hero hero-medium" id="top">
-            <div class="hero-bg soft-green"></div>
+        <section class="hero" id="top">
+            <div class="hero-bg"></div>
             <div class="container hero-content reveal">
-                <span class="eyebrow">Discover Your Practice</span>
+                <p class="eyebrow">Discover Your Practice</p>
                 <h1>Yoga Classes for Every Level</h1>
-                <p>Find the perfect session for your goals. From gentle beginnings to powerful flows and mindful restoration.</p>
+                <p>Choose from beginner-friendly classes, energizing power flow, mindful meditation, and welcoming family sessions.</p>
             </div>
         </section>
 
         <section class="section-white reveal">
             <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow">Yoga Programs</span>
-                    <h2>Classes crafted for confidence and calm</h2>
-                </div>
+                <h2>Our Yoga Programs</h2>
+                <p class="section-subtitle">Designed to help you feel strong, calm, and connected.</p>
                 <div class="pricing-grid">
-                    <article class="pricing-card hover-card reveal-card">
-                        <span class="course-label">Beginner Yoga</span>
-                        <h3>60 minutes · Easy poses · Breathing exercises</h3>
-                        <p>Ideal for new students who want safe alignment, gentle flow, and strong foundations.</p>
+                    <article class="pricing-card hover-card">
+                        <h3>Beginner Yoga</h3>
+                        <p>60 minutes Â· Easy poses Â· Breathing exercises</p>
+                        <p>Perfect for new students who want gentle guidance and foundational alignment.</p>
                         <div class="price">PKR 2,800</div>
-                        <a href="contact.html" class="button button-primary ripple">Register</a>
+                        <a href="contact.html" class="button button-primary">Register</a>
                     </article>
-                    <article class="pricing-card hover-card reveal-card">
-                        <span class="course-label">Power Yoga</span>
-                        <h3>Strength building · Flexibility enhancement</h3>
-                        <p>Dynamic classes designed to build muscle, improve stamina, and enhance movement quality.</p>
+                    <article class="pricing-card hover-card">
+                        <h3>Power Yoga</h3>
+                        <p>Strength building Â· Flexibility enhancement</p>
+                        <p>A dynamic class that combines power, flow, and mindful movement for a strong body.</p>
                         <div class="price">PKR 3,500</div>
-                        <a href="contact.html" class="button button-primary ripple">Register</a>
+                        <a href="contact.html" class="button button-primary">Register</a>
                     </article>
-                    <article class="pricing-card hover-card reveal-card">
-                        <span class="course-label">Meditation Yoga</span>
-                        <h3>Stress management · Mental peace</h3>
-                        <p>Calming breathwork and guided meditation support mental clarity and emotional balance.</p>
+                    <article class="pricing-card hover-card">
+                        <h3>Meditation Yoga</h3>
+                        <p>Stress management Â· Mental peace</p>
+                        <p>Deep breathing and guided meditation help calm your mind and release daily tension.</p>
                         <div class="price">PKR 3,000</div>
-                        <a href="contact.html" class="button button-primary ripple">Register</a>
+                        <a href="contact.html" class="button button-primary">Register</a>
                     </article>
-                    <article class="pricing-card hover-card reveal-card">
-                        <span class="course-label">Family Yoga</span>
-                        <h3>Suitable for all ages · Gentle flow</h3>
-                        <p>A welcoming practice for families to move together, breathe together, and enjoy wellness as a group.</p>
+                    <article class="pricing-card hover-card">
+                        <h3>Family Yoga</h3>
+                        <p>Suitable for all ages Â· Gentle flow</p>
+                        <p>A joyful practice designed for families to move, breathe, and relax together.</p>
                         <div class="price">PKR 4,200</div>
-                        <a href="contact.html" class="button button-primary ripple">Register</a>
+                        <a href="contact.html" class="button button-primary">Register</a>
                     </article>
                 </div>
             </div>
@@ -81,21 +74,17 @@
 
         <section class="section-light reveal">
             <div class="container section-grid">
-                <div class="glass-panel">
-                    <h2>Why choose our classes?</h2>
-                    <p>Our programs combine premium coaching with nature-inspired design to create calm, confidence, and lasting results.</p>
+                <div>
+                    <h2>Practice with Purpose</h2>
+                    <p>Each class supports your journey from flexibility and strength to mental calm and rooted presence.</p>
                 </div>
-                <div class="feature-list feature-list-simple">
-                    <li>Small group sizes</li>
-                    <li>Experienced instructors</li>
-                    <li>Supportive community</li>
-                    <li>Flexible scheduling</li>
+                <div class="intro-card">
+                    <h3>Flexible Schedule</h3>
+                    <p>Morning, afternoon, and evening classes ensure you can fit yoga into your natural rhythm.</p>
                 </div>
             </div>
         </section>
     </main>
-
-    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">?</button>
 
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -116,7 +105,7 @@
                 <a href="#top">Zeeshan</a>
             </div>
         </div>
-        <p class="footer-copy">© <span class="footer-year">2026</span> Back to Nature. All Rights Reserved.</p>
+        <p class="footer-copy">Â© <span class="footer-year">2026</span> Back to Nature. All Rights Reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
