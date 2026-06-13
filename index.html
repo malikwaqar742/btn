@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back to Nature | Yoga Studio</title>
-    <meta name="description" content="Back to Nature Yoga Studio helps you reconnect your mind, body and soul through nature-inspired yoga classes and mindfulness.">
+    <title>Back to Nature | Premium Yoga Studio</title>
+    <meta name="description" content="Back to Nature combines nature-inspired yoga classes, guided trainers, and wellness programming for mind, body, and soul.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="brand">Back to Nature</a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="main-nav">
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">??</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="main-nav" id="mainNav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="classes.html">Classes</a>
@@ -26,126 +31,194 @@
     </header>
 
     <main>
-        <section class="hero" id="top">
+        <section class="hero hero-fullscreen" id="top">
             <div class="hero-bg"></div>
-            <div class="hero-decor">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="bird bird-1"></div>
-                <div class="bird bird-2"></div>
-                <div class="leaf leaf-1"></div>
-                <div class="leaf leaf-2"></div>
-                <div class="leaf leaf-3"></div>
+            <div class="hero-scene">
+                <div class="sun-ray ray-one"></div>
+                <div class="sun-ray ray-two"></div>
+                <div class="sun-ray ray-three"></div>
+                <div class="cloud cloud-one"></div>
+                <div class="cloud cloud-two"></div>
+                <div class="cloud cloud-three"></div>
+                <div class="grass-panel"></div>
+                <div class="grass-panel grass-panel-alt"></div>
+                <div class="floating-leaf leaf-one"></div>
+                <div class="floating-leaf leaf-two"></div>
+                <div class="floating-leaf leaf-three"></div>
+                <div class="silhouette silhouette-tree"></div>
+                <div class="silhouette silhouette-lotus"></div>
+                <div class="silhouette silhouette-warrior"></div>
+                <div class="silhouette silhouette-mountain"></div>
             </div>
             <div class="container hero-content reveal">
-                <p class="eyebrow">Reconnect Your Mind, Body, and Soul Through Yoga</p>
-                <h1>Welcome to Back to Nature Yoga Studio</h1>
-                <p>Experience peaceful yoga classes surrounded by natural energy, expert guidance, and mindful movement.</p>
+                <span class="eyebrow">Reconnect Your Mind, Body and Soul Through Yoga</span>
+                <h1>Back to Nature</h1>
+                <p>Discover premium yoga programs inspired by nature, designed to support calmness, strength, and long-term wellness.</p>
                 <div class="hero-actions">
-                    <a href="contact.html" class="button button-primary">Join Now</a>
-                    <a href="#benefits" class="button button-secondary">Explore Classes</a>
+                    <a href="contact.html" class="button button-primary ripple">Join Now</a>
+                    <a href="#benefits" class="button button-secondary ripple">Explore Classes</a>
                 </div>
             </div>
         </section>
 
-        <section class="intro section-light reveal" id="about-preview">
+        <section class="section-light about-preview reveal">
             <div class="container section-grid">
                 <div>
-                    <h2>About Back to Nature</h2>
-                    <p>Back to Nature Yoga Studio was created to help people reconnect with nature through mindful movement. Our practice blends gentle flow, breathwork, and nature-inspired calm.</p>
+                    <h2>Nature. Wellness. Transformation.</h2>
+                    <p>Back to Nature is a premium yoga destination created to help you move mindfully, breathe deeply, and reconnect with peaceful living.</p>
                 </div>
-                <div class="intro-cards">
-                    <div class="intro-card">
-                        <h3>Mindful Living</h3>
-                        <p>Find balance, reduce stress, and cultivate inner peace with every session.</p>
+                <div class="glass-panel">
+                    <h3>Wellness begins with gentle movement, grounded breath, and comforting nature-inspired design.</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-white benefits-section reveal" id="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Benefits of Practicing Yoga</span>
+                    <h2>Support your health with mindful movement</h2>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">??</div>
+                        <h3>Improves Flexibility</h3>
+                        <p>Move with ease and open tight muscles through gentle guided stretches.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">??</div>
+                        <h3>Reduces Stress</h3>
+                        <p>Release daily tension with calming breathwork and restorative poses.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">??</div>
+                        <h3>Better Posture</h3>
+                        <p>Build body awareness and alignment that supports everyday comfort.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">???</div>
+                        <h3>Stronger Immunity</h3>
+                        <p>Support immune health with movement that encourages circulation and balance.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">??</div>
+                        <h3>Better Sleep</h3>
+                        <p>Enjoy deeper rest through nightly practices that calm your nervous system.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">??</div>
+                        <h3>Enhanced Mental Focus</h3>
+                        <p>Sharpen clarity and presence through mindful sequencing.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">???</div>
+                        <h3>Improved Breathing</h3>
+                        <p>Learn breath practices that boost energy and relax the mind.</p>
+                    </article>
+                    <article class="benefit-card hover-card reveal-card">
+                        <div class="benefit-icon">??</div>
+                        <h3>Healthy Lifestyle</h3>
+                        <p>Build sustainable habits with movement, rest, and nourishment in harmony.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light tips-section reveal">
+            <div class="container section-grid reverse-grid">
+                <div class="glass-panel">
+                    <span class="eyebrow">Daily Wellness Tips</span>
+                    <h2>Small habits for a balanced life</h2>
+                    <div class="tip-card" id="wellnessTip">
+                        Practice yoga for 15 minutes daily.
                     </div>
-                    <div class="intro-card">
-                        <h3>Natural Energy</h3>
-                        <p>Practice yoga with a nature-inspired palette of greens, earth tones, and soft skies.</p>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="icon-circle">??</div>
+                        <p>Practice outdoors when you can.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-circle">??</div>
+                        <p>Drink water throughout the day.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-circle">??</div>
+                        <p>Take a few deep breaths each hour.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="benefits section-white reveal" id="benefits">
+        <section class="section-white trainers-section reveal" id="trainers">
             <div class="container">
-                <h2>Benefits of Practice</h2>
-                <p class="section-subtitle">Improve your wellbeing with every breath.</p>
-                <div class="cards-grid">
-                    <article class="benefit-card hover-card">
-                        <div class="icon icon-stress"></div>
-                        <h3>Stress Relief</h3>
-                        <p>Release tension and calm your mind through mindful breathing and grounding poses.</p>
-                    </article>
-                    <article class="benefit-card hover-card">
-                        <div class="icon icon-flexibility"></div>
-                        <h3>Better Flexibility</h3>
-                        <p>Reconnect your body with gentle stretches that improve mobility and posture.</p>
-                    </article>
-                    <article class="benefit-card hover-card">
-                        <div class="icon icon-peace"></div>
-                        <h3>Mental Peace</h3>
-                        <p>Build steady focus, restful sleep, and emotional calm with meditation practices.</p>
-                    </article>
-                    <article class="benefit-card hover-card">
-                        <div class="icon icon-health"></div>
-                        <h3>Improved Health</h3>
-                        <p>Support your immune system, energy levels, and overall wellness naturally.</p>
-                    </article>
+                <div class="section-header">
+                    <span class="eyebrow">Featured Trainers</span>
+                    <h2>Meet Your yoga mentors</h2>
                 </div>
-            </div>
-        </section>
-
-        <section class="trainers section-light reveal" id="trainers">
-            <div class="container">
-                <h2>Featured Trainers</h2>
-                <p class="section-subtitle">Meet our experienced yoga guides.</p>
-                <div class="cards-grid">
-                    <article class="trainer-card hover-card">
-                        <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="trainer-grid">
+                    <article class="trainer-card hover-card reveal-card">
+                        <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=900&q=80');"></div>
                         <div class="trainer-info">
                             <h3>Tahseen</h3>
-                            <p>Certified Yoga Instructor</p>
-                            <p>Specialization: Meditation &amp; Flexibility</p>
+                            <p>Yoga &amp; Meditation Expert</p>
+                            <p>8+ Years Experience</p>
+                            <div class="badge-list">
+                                <span class="badge">Meditation</span>
+                                <span class="badge">Flexibility</span>
+                                <span class="badge">Holistic Care</span>
+                            </div>
                         </div>
                     </article>
-                    <article class="trainer-card hover-card">
-                        <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80');"></div>
+                    <article class="trainer-card hover-card reveal-card">
+                        <div class="trainer-image" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80');"></div>
                         <div class="trainer-info">
                             <h3>Zeeshan</h3>
-                            <p>Certified Yoga Instructor</p>
-                            <p>Specialization: Strength Yoga &amp; Breathing Techniques</p>
+                            <p>Fitness &amp; Breathing Specialist</p>
+                            <p>7+ Years Experience</p>
+                            <div class="badge-list">
+                                <span class="badge">Strength</span>
+                                <span class="badge">Breathwork</span>
+                                <span class="badge">Energy</span>
+                            </div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="testimonials section-white reveal" id="testimonials">
+        <section class="section-light testimonials-section reveal" id="testimonials">
             <div class="container">
-                <h2>Testimonials</h2>
-                <p class="section-subtitle">What our students say about Back to Nature.</p>
-                <div class="testimonial-grid">
-                    <article class="testimonial-card hover-card">
-                        <p class="stars">‚òÖ‚òÖ‚òÖ‚òÖ‚òÖ</p>
-                        <h3>Sarah Ahmed</h3>
-                        <p>‚ÄúThe best yoga experience I've ever had. The natural environment is calming and refreshing.‚Äù</p>
-                    </article>
-                    <article class="testimonial-card hover-card">
-                        <p class="stars">‚òÖ‚òÖ‚òÖ‚òÖ‚òÖ</p>
-                        <h3>Ali Khan</h3>
-                        <p>‚ÄúTrainer Tahseen helped me improve flexibility and reduce stress significantly.‚Äù</p>
-                    </article>
-                    <article class="testimonial-card hover-card">
-                        <p class="stars">‚òÖ‚òÖ‚òÖ‚òÖ‚òÖ</p>
-                        <h3>Fatima Noor</h3>
-                        <p>‚ÄúZeeshan's breathing sessions transformed my daily routine and mental focus.‚Äù</p>
-                    </article>
+                <div class="section-header">
+                    <span class="eyebrow">Testimonials</span>
+                    <h2>What our students are saying</h2>
+                </div>
+                <div class="testimonial-carousel">
+                    <button class="carousel-control prev" id="prevSlide" aria-label="Previous testimonial">ã</button>
+                    <div class="carousel-track" id="testimonialTrack">
+                        <article class="testimonial-slide active">
+                            <p class="stars">?????</p>
+                            <h3>ìThe peaceful atmosphere and expert guidance changed my lifestyle completely.î</h3>
+                            <span>ó Sarah Ahmed</span>
+                        </article>
+                        <article class="testimonial-slide">
+                            <p class="stars">?????</p>
+                            <h3>ìTahseen's meditation sessions helped me reduce stress and improve focus.î</h3>
+                            <span>ó Ali Khan</span>
+                        </article>
+                        <article class="testimonial-slide">
+                            <p class="stars">?????</p>
+                            <h3>ìZeeshan's breathing techniques boosted my energy and fitness.î</h3>
+                            <span>ó Fatima Noor</span>
+                        </article>
+                    </div>
+                    <button class="carousel-control next" id="nextSlide" aria-label="Next testimonial">õ</button>
                 </div>
             </div>
         </section>
     </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">?</button>
 
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -166,10 +239,9 @@
                 <a href="#trainers">Zeeshan</a>
             </div>
         </div>
-        <p class="footer-copy">¬© <span class="footer-year">2026</span> Back to Nature. All Rights Reserved.</p>
+        <p class="footer-copy">© <span class="footer-year">2026</span> Back to Nature. All Rights Reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
 </html>
-
