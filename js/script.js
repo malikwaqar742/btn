@@ -29,13 +29,50 @@ const revealObserver = new IntersectionObserver((entries) => {
     threshold: 0.18
 });
 
-document.querySelectorAll('.reveal').forEach(section => {
+document.querySelectorAll('.reveal, .reveal-card').forEach(section => {
     revealObserver.observe(section);
 });
+
+const tipText = document.getElementById('tipText');
+const healthTips = [
+    'Practice yoga for 15 minutes daily.',
+    'Stay hydrated throughout the day.',
+    'Focus on deep breathing.',
+    'Spend time in nature.',
+    'Stretch after long sitting periods.',
+    'Maintain a balanced diet.',
+    'Sleep at least 7-8 hours.',
+    'Meditate for mental clarity.'
+];
+let tipIndex = 1;
+
+function updateHealthTip() {
+    if (!tipText) return;
+    tipText.textContent = healthTips[tipIndex];
+    tipIndex = (tipIndex + 1) % healthTips.length;
+}
+
+setInterval(updateHealthTip, 5000);
 
 const footerYear = document.querySelector('.footer-year');
 if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
+}
+
+const contactForm = document.getElementById('contactForm');
+const contactSuccess = document.getElementById('contactSuccess');
+if (contactForm && contactSuccess) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+        contactSuccess.hidden = false;
+        contactSuccess.classList.add('show');
+        contactForm.reset();
+        contactForm.querySelectorAll('input, textarea').forEach(field => field.blur());
+    });
 }
 
 const leaves = document.querySelectorAll('.leaf');
