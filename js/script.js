@@ -1,32 +1,51 @@
-// Simple JavaScript for smooth scrolling and animations
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
+
+menuToggle?.addEventListener('click', () => {
+    mainNav?.classList.toggle('open');
 });
 
-// Add scroll animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationDelay = '0s';
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+    link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            mainNav?.classList.remove('open');
         }
     });
 });
 
-document.querySelectorAll('.pose').forEach(pose => {
-    observer.observe(pose);
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.18
 });
 
-// Background animation
-let angle = 0;
-function animateBackground() {
-    angle += 0.5;
-    document.body.style.background = `linear-gradient(${angle}deg, #667eea 0%, #764ba2 100%)`;
-    requestAnimationFrame(animateBackground);
+document.querySelectorAll('.reveal').forEach(section => {
+    revealObserver.observe(section);
+});
+
+const footerYear = document.querySelector('.footer-year');
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
 }
-animateBackground();
+
+const leaves = document.querySelectorAll('.leaf');
+let leafOffset = 0;
+function animateLeaves() {
+    leafOffset += 0.3;
+    leaves.forEach((leaf, index) => {
+        const drift = Math.sin((leafOffset + index * 10) / 10) * 18;
+        leaf.style.transform = `translateX(${drift}px) rotate(45deg)`;
+    });
+    requestAnimationFrame(animateLeaves);
+}
+animateLeaves();
